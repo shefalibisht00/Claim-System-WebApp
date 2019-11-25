@@ -1,0 +1,24 @@
+  <div class="row" *ngIf="userDetail">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-content">
+         <h3>
+          <span>Email :<em> {{userDetail.email}}</em></span>
+          <br>
+          <span>Full Name : <em>{{userDetail.fullName}} </em></span>
+          </h3>
+        </div>
+      </div>  
+      <button mat-raised-button color="accent" routerLink="/claim/add">Add Reimbursement</button>
+
+    </div>
+  </div>
+
+<section fxLayout="column">
+    <div fxFlexAlign="center">
+      <p>Reimburesement Claims</p>
+    </div>
+
+  <app-claim-list></app-claim-list>
+ 
+</section>

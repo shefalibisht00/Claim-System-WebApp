@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Edit Details</h2>
+
+<mat-dialog-content [formGroup]="form">
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" class="form-control" placeholder="Choose a date" formControlName="Date"
+            readonly (click)="picker.open()" #Date>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select class="form-control" placeholder="{{reimbursementType}}" formControlName="ReimbursementType"
+            #ReimbursementType>
+            <mat-option *ngFor="let bank of ReimbursementTypeList" [value]="bank"> {{bank}} </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" class="form-control" placeholder="{{requestedValue}}" formControlName="RequestedValue"
+            #RequestedValue>
+        <mat-hint align="end">Requested Value</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select class="form-control" placeholder="{{currency}}" formControlName="Currency" #Currency>
+            <mat-option *ngFor="let curr of CurrencyList" [value]="curr"> {{curr}} </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+        <button class="mat-raised-button" (click)="close()">Close</button>
+        <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+    </mat-dialog-actions>

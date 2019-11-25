@@ -1,0 +1,36 @@
+<p>user-list works!</p>
+
+<div *ngIf="Emp; else elseBlock"
+class="card mx-auto text-center border-dark" style="width: 50rem; align-content: center;">
+    <div class="card-header text-white bg-dark">
+        <h4> Users Table</h4>
+    </div>
+    <table class="card-table table bg-success">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Bank</th>
+        <th scope="col">Pan</th>
+        <th scope="col">BankAccount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of Emp; index as i">
+        <th scope="row"> {{ i +1 }} </th>
+        <td> {{ user.fullName}}</td>
+        <td> {{ user.email}}</td>
+        <td> {{ user.password}}</td>
+        <td> {{ user.bank}}</td>
+        <td> {{ user.panNumber}}</td>
+        <td> {{ user.bankAccountNumber}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ng-template #elseBlock>
+   <h3 style="text-align: center;">
+    No users avaliable</h3>
+  </ng-template>

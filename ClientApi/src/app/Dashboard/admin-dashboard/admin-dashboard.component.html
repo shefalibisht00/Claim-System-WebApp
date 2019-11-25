@@ -1,0 +1,38 @@
+
+<section fxLayout="column" fxFlexAlign="stretch">
+        <div fxFlexAlign="center">
+          <p>ADMIN PANEL</p>
+        </div>
+           
+        <div class="example-button-row">
+           
+            <button mat-raised-button color="primary"  (click)="pending()">Pending</button>
+            <button mat-raised-button color="accent" (click)="approved()">Approved</button>
+            <button mat-raised-button color="warn" (click)="declined()">Declined</button>
+      
+          </div>
+          <div *ngIf="Ispending">
+              <app-claim-list-pending></app-claim-list-pending>
+          </div>
+          <div *ngIf="Isapproved">
+              <app-claim-list-approved></app-claim-list-approved>
+            </div>
+            <div *ngIf="Isdeclined">
+                <app-claim-list-declined></app-claim-list-declined>
+              </div>
+        
+
+
+
+        <!-- <mat-tab-group>
+          <mat-tab label="Pending"> 
+            <app-claim-list-pending></app-claim-list-pending>
+          </mat-tab>
+          <mat-tab label="Approved">
+            <app-claim-list-approved></app-claim-list-approved>
+          </mat-tab>
+          <mat-tab label="Declined" >
+            <app-claim-list-declined></app-claim-list-declined>
+           </mat-tab>
+        </mat-tab-group> -->
+      </section>

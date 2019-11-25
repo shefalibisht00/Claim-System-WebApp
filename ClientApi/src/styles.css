@@ -1,0 +1,11 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body { 
+    margin: 0;
+    height: 100%;
+   
+}
+
+section{
+    padding-bottom: 10em;
+}

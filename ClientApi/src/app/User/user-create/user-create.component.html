@@ -1,0 +1,65 @@
+<div class="card mx-auto border-dark" style="width: 40rem; align-content: center;">
+  <div class="card-header text-dark bg-info">
+    <h4> Register User</h4>
+  </div>
+  <div class="card-body">
+    <form class="col s12 white" #userRegistrationForm="ngForm" #f="ngForm" 
+    (ngSubmit)="OnSubmit(userRegistrationForm)" >
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="validate" type="text" name="FullName" #FullName="ngModel" [(ngModel)]="user.FullName" required>
+          <label data-error="Required field!">Full Name</label>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="validate" type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email"
+            [pattern]="emailPattern">
+          <label data-error="Invalid email!">Email</label>
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="input-field col s6">
+          <input class="validate" type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password" [pattern]="passwordPattern"
+            required >
+          <label data-error="Invalid Password!">Password</label>
+        </div>
+        <div class="input-field col s6">
+          <input class="validate" type="password" name="ConfirmPassword" #ConfirmPassword="ngModel"
+            [(ngModel)]="user.ConfirmPassword" PasswordMatch>
+          <label data-error="Invalid Password!">Confirm Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="validate" type="text" name="PanNumber" #PanNumber="ngModel"[(ngModel)]="user.PanNumber"
+            required>
+          <label data-error="Required field!">PanNumber</label>
+        </div>
+      </div>
+      <div>
+        <label for="power">Bank</label>
+        <select class="form-control"  type="text" name="Bank" #Bank="ngModel" [(ngModel)]="user.Bank" required>
+          <option *ngFor="let pow of BankList" [value]="pow">{{pow}}</option>
+        </select>
+      </div>
+ 
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="validate" type="text" name="BankAccountNumber" #BankAccountNumber="ngModel"
+            [(ngModel)]="user.BankAccountNumber" required>
+          <label data-error="Required field!">Bank Account Number</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <button [disabled]="!userRegistrationForm.valid" class="btn-large btn-submit" type="submit">Submit</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  </div>

@@ -1,0 +1,33 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex.xs="100%">
+        <mat-card-title>Login</mat-card-title>
+        <form [formGroup]="ownerForm" #form="ngForm" autocomplete="off" novalidate
+        (ngSubmit)="loginUser(ownerForm.value)" fxLayout="column wrap" fxLayoutAlign="center center"
+            fxLayoutGap="10px">
+
+            <mat-card-content>
+                    <div *ngIf="isLoginError" class="red-text center error-message">
+                            <i class="material-icons">error</i> Incorrect username or password
+                        </div>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Email"  #Email  formControlName="Email" id="Email" required>
+                    <mat-error *ngIf="hasError('Email', 'required')">Invalid Email</mat-error>
+                </mat-form-field>
+               
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password"  #Password  formControlName="Password" id="Password" required>
+                    <mat-error *ngIf="hasError('Password', 'required')">Invalid Password</mat-error>
+                </mat-form-field>
+               
+              </mat-card-content>
+              <mat-card-actions align="center">
+                  <button mat-raised-button color="primary" [disabled]="!ownerForm.valid">Login</button>
+                  <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+                  <br><br>
+                  <a routerLink="/user/register">Already Registered? SignIn</a>
+
+              </mat-card-actions>
+
+          </form>
+      </mat-card>
+  </section>

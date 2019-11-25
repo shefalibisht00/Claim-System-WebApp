@@ -1,0 +1,43 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex.xs="100%">
+        <mat-card-title>Add New Claim</mat-card-title>
+  
+      <form [formGroup]="angForm"  #form="ngForm" (ngSubmit)="addClaim(Date.value, ReimbursementType.value, RequestedValue.value, Currency.value)"
+      novalidate  fxLayout="column wrap" fxLayoutAlign="center left"
+      fxLayoutGap="10px">
+  
+      <mat-card-content>
+  
+          <mat-form-field>
+              <input matInput [matDatepicker]="picker" class="form-control" placeholder="Choose a date" formControlName="Date" id="Date" 
+                  readonly (click)="picker.open()" #Date>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="hasError('Date', 'required')">Date is required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select class="form-control" placeholder="Reimbursement Type" formControlName="ReimbursementType"  #ReimbursementType>
+                    <mat-option *ngFor="let bank of ReimbursementTypeList" [value]="bank"> {{bank}} </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" class="form-control" placeholder="Requested Value" formControlName="RequestedValue"  #RequestedValue>
+                <mat-hint align="end">Requested Value</mat-hint>
+                <mat-error *ngIf="hasError('RequestedValue', 'required')">Enter Requested Value</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select class="form-control" placeholder="Currency" formControlName="Currency"  #Currency>
+                    <mat-option *ngFor="let curr of CurrencyList" [value]="curr"> {{curr}} </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br> 
+            <input type="file" formControlName="UploadImage" class="file-input" (change)="handleFileInput($event.target.files)" #UploadImage/> 
+              
+          </mat-card-content>
+          <mat-card-actions align="center">
+            <button mat-raised-button color="primary" [disabled]="!angForm.valid">Add</button>
+            <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </section>

@@ -1,0 +1,6 @@
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.shared\bin\Debug\ClaimSystem.shared.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.shared\bin\Debug\ClaimSystem.shared.pdb
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.shared\obj\Debug\ClaimSystem.shared.csprojAssemblyReference.cache
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.shared\obj\Debug\ClaimSystem.shared.csproj.CoreCompileInputs.cache
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.shared\obj\Debug\ClaimSystem.shared.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.shared\obj\Debug\ClaimSystem.shared.pdb

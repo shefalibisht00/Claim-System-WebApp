@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+ 
+a:hover, a:active{
+    color: yellowgreen;
+}
+ 
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+mat-toolbar{
+    border-radius: 1px;
+    height: 2.7em;
+}
+ 
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}

@@ -1,0 +1,66 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex.xs="100%">
+        <mat-card-title>Register User</mat-card-title>
+        <form [formGroup]="ownerForm" #form="ngForm" autocomplete="off" novalidate
+            (ngSubmit)="createUser(ownerForm.value)" fxLayout="column wrap" fxLayoutAlign="center center"
+            fxLayoutGap="10px">
+
+            <mat-card-content>
+
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Full Name" formControlName="FullName" id="FullName">
+                    <mat-hint align="end">Max 255 characters long</mat-hint>
+                    <mat-error *ngIf="hasError('FullName', 'required')">Name is required</mat-error>
+                    <mat-error *ngIf="hasError('FullName', 'maxlength')">More than 255 characters</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Email" formControlName="Email" id="Email">
+                    <mat-error *ngIf="hasError('Email', 'required')">Email is required</mat-error>
+                    <mat-error *ngIf="hasError('Email', 'email')">Valid Email</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" formControlName="Password" id="Password"
+                        class="form-control">
+                    <mat-hint align="end">Min 8 characters, have at-least 1 special character, 1 number and 1 alphabet.
+                    </mat-hint>
+                    <mat-error *ngIf="hasError('Password', 'required')">Name is required</mat-error>
+                    <mat-error *ngIf="hasError('Password', 'patternValidator')">Weak Password</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Confirm Password" formControlName="ConfirmPassword"
+                        id="ConfirmPassword" class="form-control">
+                    <mat-hint align="end">Confirm Password.</mat-hint>
+                    <mat-error *ngIf="hasError('ConfirmPassword', 'required')">Password is required</mat-error>
+                    <mat-error *ngIf="hasError('ConfirmPassword', 'NoPassswordMatch')">Password doesnt match
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="PAN Number" formControlName="PanNumber" id="PanNumber">
+                    <mat-hint align="end">10-digit alphanumeric</mat-hint>
+                    <mat-error *ngIf="hasError('PanNumber', 'required')">PAN Number is required</mat-error>
+                    <mat-error *ngIf="hasError('PanNumber', 'pattern')">Invalid Input!</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select placeholder="Bank" formControlName="Bank" id="Bank">
+                        <mat-option *ngFor="let bank of BankList" [value]="bank"> {{bank}} </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Bank Account Number" formControlName="BankAccountNumber"
+                        id="BankAccountNumber">
+                    <mat-hint align="end">12-digit numeric only</mat-hint>
+                    <mat-error *ngIf="hasError('BankAccountNumber', 'required')">Bank Account Number is required
+                    </mat-error>
+                    <mat-error *ngIf="hasError('BankAccountNumber', 'pattern')">Invalid Input!</mat-error>
+                </mat-form-field>
+
+            </mat-card-content>
+            <mat-card-actions align="center">
+                <button mat-raised-button color="primary" [disabled]="!ownerForm.valid">Register</button>
+                <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+                <br><br>
+                <a routerLink="/user/login">New User? SignUp</a>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</section>

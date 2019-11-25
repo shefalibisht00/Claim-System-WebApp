@@ -1,0 +1,17 @@
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\ClaimSystem.BLL.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\ClaimSystem.BLL.pdb
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\AutoMapper.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\ClaimSystem.DAL.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\ClaimSystem.shared.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\EntityFramework.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\ClaimSystem.DAL.pdb
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\ClaimSystem.DAL.dll.config
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\ClaimSystem.shared.pdb
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\AutoMapper.pdb
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\AutoMapper.xml
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\bin\Debug\EntityFramework.xml
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\obj\Debug\ClaimSystem.BLL.csprojAssemblyReference.cache
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\obj\Debug\ClaimSystem.BLL.csproj.CoreCompileInputs.cache
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\obj\Debug\ClaimSystem.BLL.csproj.CopyComplete
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\obj\Debug\ClaimSystem.BLL.dll
+C:\Users\shefalibisht\source\dotNetMVC\Project_Final\ClaimWebApi\ClaimSystem.BLL\obj\Debug\ClaimSystem.BLL.pdb
